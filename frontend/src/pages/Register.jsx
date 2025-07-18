@@ -10,7 +10,7 @@ const Register=()=> {
 
     const handleSubmit=async(e)=>{
         e.preventDefault();
-       await axios.post('${import.meta.env.VITE_API_BASE_URL}/api/register', form);
+       await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/register`, form);
         navigate('/login');
         console.error('Registration failed:', err);
         alert('Registration failed. Please try again.');
